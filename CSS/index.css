@@ -1,0 +1,49 @@
+/*Navbar*/
+.navbar{
+    background-color: rgba(255, 0, 0, 0.637);
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.navbar a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    margin: 0px 10px 0px 0px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    transition: 0.2s ease-in;
+}
+
+.navbar a:hover{
+    cursor: pointer;
+    background-color: red;
+}
+
+.navbar span{
+    transform: translate(200%, 0%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:firebrick;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+}
+
+#logout-btn{
+    transform: translate(750%, 0%);
+}
+
+.fname{
+    color: Black !important;
+}
+
+.st-list{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
