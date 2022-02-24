@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NMIMS - Portal</title>
+    <title>Trading Floor - Login</title>
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
@@ -18,11 +18,12 @@
         </div>
         <div class="login-container">
             <div class="login-logo">
-                <img src="../Images/nm.png" alt="logo">
+                <img id="trdlogo" src="../Images/trdlogo.png" alt="logo">
             </div>
-            <div class="login-desc">
-                Student Attendence Manager
-            </div>
+
+            <!-- <div class="login-desc">
+                Easy Stock Trading
+            </div> -->
                                 
             <div class="login">
                 <p class="title">Login</p>
