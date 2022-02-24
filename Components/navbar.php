@@ -27,10 +27,11 @@
 <body>
     <div class="navbar">
         <a href="dashboard.php">Home</a>
-        <a href="student.php">Manage Students</a>
-        <a href="attendance.php">Take Attendance</a>
+        <a href="quote.php">Quote Price</a>
+        <a href="buy.php">Buy Shares</a>
+        <a href="sell.php">Sell Shares</a>
 
-        <span>Welcome<span class='fname'><?php echo $fname?></span></span>
+        <span>&nbsp;&nbsp;Welcome<span class='fname'><?php echo $fname?></span></span>
         <a id="logout-btn" href="logout.php">Logout</a>
     </div>
 </body>

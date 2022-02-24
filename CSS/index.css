@@ -1,6 +1,9 @@
 /*Navbar*/
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .navbar{
-    background-color: rgba(255, 0, 0, 0.637);
+    background-color: #040cb3;
     display: flex;
     justify-content: left;
     width: 100%;
@@ -20,7 +23,7 @@
 
 .navbar a:hover{
     cursor: pointer;
-    background-color: red;
+    background-color: #0e86d4;
 }
 
 .navbar span{
@@ -28,18 +31,14 @@
     color: white;
     font-weight: bold;
     font-size: 18px;
-    background-color:firebrick;
+    background-color: #189AB4;
     padding: 10px;
     border: 1px solid transparent;
     border-radius: 25px;
 }
 
 #logout-btn{
-    transform: translate(750%, 0%);
-}
-
-.fname{
-    color: Black !important;
+    transform: translate(700%, 0%);
 }
 
 .st-list{
