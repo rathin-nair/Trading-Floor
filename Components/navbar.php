@@ -1,3 +1,4 @@
+<!-- Navbar.php -->
 <?php
 
     if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){
@@ -17,19 +18,27 @@
     $fname = $row['f_name'];
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/index.css">
+    <!-- Angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+    <!-- <script src="../share-list.js"></script> -->
+
 </head>
-<body>
+
+
+
+<body ng-app="trad">
     <div class="navbar">
-        <a href="dashboard.php">Home</a>
-        <a href="quote.php">Quote Price</a>
-        <a href="buy.php">Buy Shares</a>
-        <a href="sell.php">Sell Shares</a>
+        <a href="#/dashboard">Home</a>
+        <a href="#/quote">Quote Price</a>
+        <a href="#/buy">Buy Shares</a>
+        <a href="#/sell">Sell Shares</a>
 
         <span>&nbsp;&nbsp;Welcome<span class='fname'><?php echo $fname?></span></span>
         <a id="logout-btn" href="logout.php">Logout</a>

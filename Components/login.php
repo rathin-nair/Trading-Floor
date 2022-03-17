@@ -1,4 +1,4 @@
-<?php require_once 'make_db.php' ?>
+<!-- Add require once line deleted by mistake -->
 
 <!DOCTYPE html>
 <html lang="en">
