@@ -1,39 +1,5 @@
 var app = angular.module('trad', ['ngRoute']);
 
-// Making routes
-app.config(function($routeProvider) {
-    $routeProvider
-    
-    .when('/', {
-        templateUrl : '../Components/dashboard.php',
-        controller : 'shareCtrl'
-    })
-    
-    .when('/dashboard', {
-        templateUrl : '../Components/dashboard.php',
-        controller : 'shareCtrl'
-    })
-
-    .when('/quote', {
-        templateUrl : '../Components/quote.php',
-        controller: 'showQuote'
-    })
-    
-    .when('/buy', {
-        templateUrl : 'buy.php',
-        controller : 'shareCtrl'
-    })
-
-    .when('/sell', {
-        templateUrl : 'sell.php',
-        controller: 'shareCtrl'
-    })
-    
-    .otherwise({redirectTo: '/'});
-
-});
-
-
 app.controller('shareCtrl', function($scope){
     $scope.boughtShares = [
         {

@@ -1,3 +1,4 @@
+<!-- SESSIONS -->
 <?php
     session_start();
     if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){
@@ -12,16 +13,30 @@
     $fid = $_SESSION['fid'];
 ?>
 
+
+
+<!-- PAGE CONTENT -->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <title>Trading Floor - Buy</title>
-    <link rel="stylesheet" href="../CSS/index.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="../CSS/quote.css">
     <link rel="stylesheet" href="../CSS/dashboard.css">
+
 </head>
+
 <body>
+    <!-- Adding Navbar -->
     <?php require_once 'navbar.php'?>
+
+    <!-- Main content -->
     <div class="quoteContainer">
         <form  class="quoteForm" action="">
             <input type="text" value="Share Symbol"><br>
@@ -50,5 +65,5 @@
             </tr>
         </table>
     </div>
-    
 </body>
+</html>

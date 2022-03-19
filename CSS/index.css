@@ -25,7 +25,7 @@
 }
 
 .navbar span{
-    transform: translate(200%, 0%);
+    transform: translate(50%, 0%);
     color: #010440;
     font-weight: bold;
     font-size: 18px;
@@ -36,5 +36,10 @@
 }
 
 #logout-btn{
-    transform: translate(700%, 0%);
+    background-color: rgba(255, 118, 118, 0.781);
+    transform: translate(500%, 0%);
+}
+
+#logout-btn:hover{
+    background-color: red;
 }

@@ -2,27 +2,27 @@
 <?php
     session_start();
     
-    if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){
+    if(!isset($_SESSION['userid']) || $_SESSION['userid']==false){
         header('location: login.php');
     }
-    
     
     $dbhost = 'localhost';
     $dbUsername = 'root';
     $dbpassword = '';
-    $dbname = "Attendance_DB";
+    $dbname = "Trading_floor";
 
     $conn = mysqli_connect($dbhost, $dbUsername, $dbpassword, $dbname);
-    $fid = $_SESSION['fid'];
+    $userid = $_SESSION['userid'];
 
-    $fac = "SELECT * FROM FACULTY WHERE fid = '$fid'";
+    $sql = "SELECT * FROM b_users WHERE userid = '$userid'";
                                     
-    $facultyTable = mysqli_query($conn, $fac);
-    $row = mysqli_fetch_array($facultyTable);
-    $fname = $row['f_name'];
-    $DP_name = $row['dept'];
-
+    $shareTable = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($shareTable);
+    $uname = $row['username'];
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <!--Page-->
     <head>
@@ -37,17 +37,16 @@
         <link rel="stylesheet" href="../CSS/index.css">
         <link rel="stylesheet" href="../CSS/dashboard.css">
 
-        <!-- Angular -->
+        <!-- Angular
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script> -->
         <script src="../share-list.js"></script>
     </head>
+
     <body>
-
-    <div ng-view></div>
-
+    <?php require_once 'navbar.php'?>
+    <!-- Content -->
             <div ng-controller="shareCtrl">
-            <?php require_once 'navbar.php'?>
             <br><br><br>
             <table class="stock_table">
                 <tr>
@@ -80,6 +79,7 @@
                 </tr>
             </table>
             </div>
-    </body>
 
+    </body>
+</html>
 
