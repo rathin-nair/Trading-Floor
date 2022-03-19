@@ -1,3 +1,5 @@
+<!-- DESTROY SESSION -->
+
 <?php
     session_start();
     if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){

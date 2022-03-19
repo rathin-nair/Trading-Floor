@@ -8,7 +8,7 @@ if(isset($_POST["log-submit"]))
     $dbhost = 'localhost';
     $dbUsername = 'root';
     $dbpassword = '';
-    $dbname = 'Attendance_DB';
+    $dbname = 'Trading_floor';
 
     //Creating Database connection
     $conn  = mysqli_connect($dbhost, $dbUsername, $dbpassword, $dbname);
@@ -17,7 +17,7 @@ if(isset($_POST["log-submit"]))
         die('Connection Failed: '.mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM FACULTY WHERE email = '$useremail';";
+    $sql = "SELECT * FROM b_users WHERE email = '$useremail'";
     if($result = mysqli_query($conn, $sql))
     {
         if(mysqli_num_rows($result) == 0)
@@ -26,17 +26,18 @@ if(isset($_POST["log-submit"]))
         }
         else{
             $row = mysqli_fetch_array($result);
-            
-            $pwd_fetched = $row["pass"];
-            if($pwd === $pwd_fetched)
-            {
-                session_start();
-                $_SESSION["fid"] = $row["fid"];
-                header("location:dashboard.php");
-            }
-            else
+            //var_dump ($row);
+            $pwdhashed = $row["phash"];
+            $checkpass = password_verify($pwd, $pwdhashed);
+            if($checkpass == false)
             {
                 header("location:login.php?error=erpass");
+            }
+            else if($checkpass == true)
+            {
+                session_start();
+                $_SESSION["userid"] = $row["userid"];
+                //header("location:dashboard.php");
             }
         }
     }
