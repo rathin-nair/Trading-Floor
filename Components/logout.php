@@ -2,7 +2,7 @@
 
 <?php
     session_start();
-    if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){
+    if(!isset($_SESSION['userid']) || $_SESSION['userid']==false){
         header('location: login.php');
     }else{
         session_unset();

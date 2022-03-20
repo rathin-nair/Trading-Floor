@@ -2,19 +2,17 @@
 
 <?php
     session_start();
-    if(!isset($_SESSION['fid']) || $_SESSION['fid']==false){
-        header('location: login.php');
+    if(!isset($_SESSION['userid']) || $_SESSION['userid']==false){
+        header('location:login.php');
     }
     $dbhost = 'localhost';
     $dbUsername = 'root';
     $dbpassword = '';
-    $dbname = "Attendance_DB";
+    $dbname = "Trading_floor";
     
     $conn = mysqli_connect($dbhost,$dbUsername,$dbpassword, $dbname);
-    $fid = $_SESSION['fid'];
+    $userid = $_SESSION['userid'];
 
-    $sql = "select student.* from teach INNER JOIN student ON student.cid = teach.cid where teach.fid = $fid";
-    $student_table = mysqli_query($conn, $sql);
 ?>
 
 <!-- PAGE CONTENT -->

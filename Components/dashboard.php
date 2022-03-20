@@ -3,7 +3,7 @@
     session_start();
     
     if(!isset($_SESSION['userid']) || $_SESSION['userid']==false){
-        header('location: login.php');
+        header('location:login.php');
     }
     
     $dbhost = 'localhost';
