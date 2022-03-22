@@ -1,5 +1,5 @@
 <!-- Creating database -->
-<?php// require_once 'make_db.php'?>
+<?php //require_once 'make_db.php'?>
 
 <!-- LOGIN PAGE -->
 
